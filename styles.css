@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(176, 159, 221);
+  background-color: rgb(31, 13, 81);
 }
 
 .main {
@@ -18,7 +18,7 @@ body {
 
 .pal {
   width: 40rem;
-  background-color: rgb(237, 237, 242);
+  background-color: rgb(173, 173, 228);
   padding: 5rem 3rem;
   border-radius: 10px;
 }
@@ -45,9 +45,10 @@ button {
   padding: 1rem;
   border: none;
   outline: none;
+  font-size: 1rem;
   border-radius: 10px;
   border: 5px solid gray;
-  background-color: aqua;
+  background-color: rgb(236, 241, 241);
 }
 
 p.result {

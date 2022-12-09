@@ -1,24 +1,19 @@
+const word = document.querySelector('.input-text');
+
 const btn = document.querySelector('.btn');
 const result = document.querySelector('.result');
 
-btn.addEventListener('click', palindrome);
+btn.addEventListener('click', countVowel);
 
-function palindrome() {
-  const word = document.querySelector('.input-text').value;
-  let len = word.length;
+function countVowel() {
+  let vowelCount = 0;
+  let wordVal = word.value.toLowerCase();
 
-  let start = word.substring(0, Math.floor(len / 2)).toLowerCase();
-  let end = word.substring(len - Math.floor(len / 2)).toLowerCase();
-  console.log(end);
-  console.log(start);
-
-  // let flip = end.split('').reverse().join('');
-
-  let flip = [...end].reverse().join('');
-  if (start == flip) {
-    result.innerHTML = `${word.toUpperCase()} is a palindrome`;
-  } else {
-    result.innerHTML = `${word.toUpperCase()} is Not a palindrome`;
+  for (let i = 0; i < wordVal.length; i++) {
+    let letter = wordVal[i];
+    if (letter.match(/([a,e,i,o,u])/)) {
+      vowelCount++;
+    }
   }
-  console.log(flip);
+  result.innerHTML = `${word.value.toUpperCase()} has ${vowelCount} vowels`;
 }
